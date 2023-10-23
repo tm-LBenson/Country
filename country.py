@@ -1,5 +1,5 @@
 def display_menu():
-'''Display menu for terminal UI'''
+    '''Display menu for terminal UI'''
     print("======================================")
     print("          COUNTRY DICTIONARY          ")
     print("======================================")
@@ -12,7 +12,7 @@ def display_menu():
     return choice
 
 def seed_dictionary():
-'''Generate starter data as a dictionary'''
+    '''Generate starter data as a dictionary'''
     return {
         'US': 'United States',
         'UK': 'United Kingdom',
@@ -20,7 +20,7 @@ def seed_dictionary():
     }
 
 def view_country(country_dict):
-'''Takes in dictionary as parameter, and iterates over the dictionary to find a matching country'''
+    '''Takes in dictionary as parameter, and iterates over the dictionary to find a matching country'''
     print("\nAvailable keys:")
     for key in country_dict:
         print(key)
@@ -32,7 +32,7 @@ def view_country(country_dict):
         print(f"Invalid key '{key_choice}'. No such country found.\n")
 
 def add_country(country_dict):
-'''takes in the dictionary as a parameter, and adds a new country to the list. Checks to ensure the country doesn't already exist first, if it does, it returns a message'''
+    '''takes in the dictionary as a parameter, and adds a new country to the list. Checks to ensure the country doesn't already exist first, if it does, it returns a message'''
     key_choice = input("\nEnter the key for the new country: ")
     if key_choice in country_dict:
         print(f"Key '{key_choice}' already exists. Choose a different key.\n")
@@ -43,7 +43,7 @@ def add_country(country_dict):
     print(f"Country with key '{key_choice}' added successfully.\n")
 
 def delete_country(country_dict):
-'''removes country from dictionary'''
+    '''removes country from dictionary'''
     key_choice = input("\nEnter a key to delete the corresponding country: ")
     if key_choice in country_dict:
         del country_dict[key_choice]
@@ -52,7 +52,7 @@ def delete_country(country_dict):
         print(f"Invalid key '{key_choice}'. No such country found.\n")
 
 def main():
-'''initialize the main function'''
+    '''initialize the main function'''
     country_dict = seed_dictionary()
     while True:
         choice = display_menu()
